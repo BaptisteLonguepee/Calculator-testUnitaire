@@ -1,0 +1,22 @@
+import __vite__cjsImport0_react from "/node_modules/.vite/deps/react.js?v=5091ddd7"; const React = __vite__cjsImport0_react.__esModule ? __vite__cjsImport0_react.default : __vite__cjsImport0_react; const useState = __vite__cjsImport0_react["useState"];
+function Calculator() {
+  const [input, setInput] = useState("");
+  const [result, setResult] = useState(null);
+  const handleInput = (e) => setInput(e.target.value);
+  const calculate = () => {
+    try {
+      if (/^[0-9+\-*/(). ]+$/.test(input)) {
+        const res = eval(input);
+        setResult(res);
+      } else {
+        setResult("Invalid input");
+      }
+    } catch (error) {
+      setResult("Error");
+    }
+  };
+  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("input", { type: "text", value: input, onChange: handleInput, "data-testid": "calculator-input" }), /* @__PURE__ */ React.createElement("button", { onClick: calculate, "data-testid": "calculator-button" }, "Calculate"), result !== null && /* @__PURE__ */ React.createElement("div", { "data-testid": "calculator-result" }, "Result: ", result));
+}
+export default Calculator;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNhbGN1bGF0b3IuanN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0JztcclxuXHJcbmZ1bmN0aW9uIENhbGN1bGF0b3IoKSB7XHJcbiAgICBjb25zdCBbaW5wdXQsIHNldElucHV0XSA9IHVzZVN0YXRlKCcnKTtcclxuICAgIGNvbnN0IFtyZXN1bHQsIHNldFJlc3VsdF0gPSB1c2VTdGF0ZShudWxsKTtcclxuXHJcbiAgICBjb25zdCBoYW5kbGVJbnB1dCA9IChlKSA9PiBzZXRJbnB1dChlLnRhcmdldC52YWx1ZSk7XHJcblxyXG4gICAgY29uc3QgY2FsY3VsYXRlID0gKCkgPT4ge1xyXG4gICAgICAgIHRyeSB7XHJcbiAgICAgICAgICAgIC8vIFZhbGlkZXIgbCdleHByZXNzaW9uIHBvdXIgbmUgY29udGVuaXIgcXVlIGRlcyBjaGlmZnJlcyBldCBkZXMgb3DDqXJhdGV1cnMgbWF0aMOpbWF0aXF1ZXMgZGUgYmFzZVxyXG4gICAgICAgICAgICBpZiAoL15bMC05K1xcLSovKCkuIF0rJC8udGVzdChpbnB1dCkpIHtcclxuICAgICAgICAgICAgICAgIGNvbnN0IHJlcyA9IGV2YWwoaW5wdXQpOyAvLyDDiXZhbHVlIGwnZXhwcmVzc2lvbiBtYXRow6ltYXRpcXVlIGRhbnMgbCdpbnB1dFxyXG4gICAgICAgICAgICAgICAgc2V0UmVzdWx0KHJlcyk7XHJcbiAgICAgICAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgICAgICAgICBzZXRSZXN1bHQoJ0ludmFsaWQgaW5wdXQnKTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH0gY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgICAgICAgIHNldFJlc3VsdCgnRXJyb3InKTtcclxuICAgICAgICB9XHJcbiAgICB9O1xyXG5cclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgdmFsdWU9e2lucHV0fSBvbkNoYW5nZT17aGFuZGxlSW5wdXR9IGRhdGEtdGVzdGlkPVwiY2FsY3VsYXRvci1pbnB1dFwiIC8+XHJcbiAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17Y2FsY3VsYXRlfSBkYXRhLXRlc3RpZD1cImNhbGN1bGF0b3ItYnV0dG9uXCI+Q2FsY3VsYXRlPC9idXR0b24+XHJcbiAgICAgICAgICAgIHtyZXN1bHQgIT09IG51bGwgJiYgPGRpdiBkYXRhLXRlc3RpZD1cImNhbGN1bGF0b3ItcmVzdWx0XCI+UmVzdWx0OiB7cmVzdWx0fTwvZGl2Pn1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICk7XHJcbn1cclxuXHJcbmV4cG9ydCBkZWZhdWx0IENhbGN1bGF0b3I7XHJcbiJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxTQUFTLGdCQUFnQjtBQUVoQyxTQUFTLGFBQWE7QUFDbEIsUUFBTSxDQUFDLE9BQU8sUUFBUSxJQUFJLFNBQVMsRUFBRTtBQUNyQyxRQUFNLENBQUMsUUFBUSxTQUFTLElBQUksU0FBUyxJQUFJO0FBRXpDLFFBQU0sY0FBYyxDQUFDLE1BQU0sU0FBUyxFQUFFLE9BQU8sS0FBSztBQUVsRCxRQUFNLFlBQVksTUFBTTtBQUNwQixRQUFJO0FBRUEsVUFBSSxvQkFBb0IsS0FBSyxLQUFLLEdBQUc7QUFDakMsY0FBTSxNQUFNLEtBQUssS0FBSztBQUN0QixrQkFBVSxHQUFHO0FBQUEsTUFDakIsT0FBTztBQUNILGtCQUFVLGVBQWU7QUFBQSxNQUM3QjtBQUFBLElBQ0osU0FBUyxPQUFPO0FBQ1osZ0JBQVUsT0FBTztBQUFBLElBQ3JCO0FBQUEsRUFDSjtBQUVBLFNBQ0ksb0NBQUMsYUFDRyxvQ0FBQyxXQUFNLE1BQUssUUFBTyxPQUFPLE9BQU8sVUFBVSxhQUFhLGVBQVksb0JBQW1CLEdBQ3ZGLG9DQUFDLFlBQU8sU0FBUyxXQUFXLGVBQVksdUJBQW9CLFdBQVMsR0FDcEUsV0FBVyxRQUFRLG9DQUFDLFNBQUksZUFBWSx1QkFBb0IsWUFBUyxNQUFPLENBQzdFO0FBRVI7QUFFQSxlQUFlOyIsIm5hbWVzIjpbXX0=
